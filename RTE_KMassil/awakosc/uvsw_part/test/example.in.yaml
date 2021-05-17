@@ -1,0 +1,31 @@
+cable:
+  type: None  # not used now
+  length: 1.0  # span length (m)
+  tension: 32000. # tension (N)
+  h: 500.  # pole altitude difference (2nd minus 1st, m)
+
+conductor:
+  m: 1.57  # mass per length unit (kg/m)
+  d: 0.025  # conductor diameter (m)
+  EA: 0.  # axial stiffeness (N)
+
+simulation:
+  ns: 101  # number of elements
+  tf:  4.0  # final time (s)
+  dt: 2.0E-04  # timesetp (s)
+  dr: 1.0E-03  # output step (s)
+  # si: [0.16, 0.33, 0.50, 0.67, 0.83]  # curvilinear abc. of interest (list)
+  si: 99  # curvilinear abc. of interest (int); in this case si = linspace(0, 1, n+2)[1:-1]
+  pp: True  # print progress (or not)
+
+wakeosc:
+  u:  0.9  # wind speed (m/s)
+  st: 0.235  # strouhal number (no unit)
+  cl0: 0.6
+  eps: 0.3
+  al: 0.1
+  bt: 0.
+  gm: 0.
+  md: 1  # mod number for cable initialization
+  y0: 0.  # amplitude (m) for y-initialization
+  q0: 0.05  # amplitude (no unit) for q-initialization
