@@ -12,7 +12,6 @@ def run_cable_wakeosc(cf):
 
     rk = ['cable', 'conductor', 'simulation', 'wakeosc']
     for k in rk:
-        print(k)
         if k not in cf.keys():
             raise RuntimeError('missing key in input config')
 
