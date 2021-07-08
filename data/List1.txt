@@ -1,4 +1,4 @@
-          nc          md     U [m/s]       d [m]    m [kg/m]       L [m]       H [N]          Nt      Dt [s]      tf [s]    ymax [m]       filename
+          nc          md      U[m/s]        d[m]     m[kg/m]        L[m]        H[N]          Nt       Dt[s]       tf[s]     ymax[m]       filename
            1           1         0.9       0.025        1.57           1         500       18015      0.0004       7.206 7.68195e-08    Data1.1.bin
            2           1        0.92       0.025        1.57           1         500      100000      0.0004          40 0.000204936    Data1.2.bin
            3           1        0.95       0.025        1.57           1         500       38068      0.0004     15.2272 2.68494e-05    Data1.3.bin
