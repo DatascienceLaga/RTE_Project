@@ -29,11 +29,13 @@ def generation_rforest(h,tension,u,clo,eps,TS_INDEX,LIST_PATH,plot_type):
     list_number = LIST_PATH[-9:]
 
     if(list_number == "List1.txt"):
-        ref = pd.read_csv("../data/csv/Liste1/graph{}.csv".format(set_params["nc"]))
+        ref = pd.read_csv("../data/ref/list1/graph{}.csv".format(set_params["nc"]))
         print("Liste_1")
+    
     if(list_number == "List2.txt"):
-        ref = pd.read_csv("../data/csv/Liste2/graph{}.csv".format(set_params["nc"]))
+        ref = pd.read_csv("../data/ref/list2/graph{}.csv".format(set_params["nc"]))
         print("Liste_2")
+
     if(list_number !=  "List1.txt" and list_number != "List2.txt" ):
         print("error, Numéro de liste non supporté")
 
@@ -110,7 +112,28 @@ def generation_ann(h,tension,u,clo,eps,TS_INDEX,LIST_PATH, plot_type):
 
     data_list = pd.read_csv(LIST_PATH, delim_whitespace=True)
     set_params = data_list.iloc[TS_INDEX,:]
-    ref = pd.read_csv("../data/csv/Liste1/graph{}.csv".format(set_params["nc"]))
+    #ref = pd.read_csv("../data/csv/Liste1/graph{}.csv".format(set_params["nc"]))
+    
+    
+    list_number = LIST_PATH[-9:]
+
+    if(list_number == "List1.txt"):
+        ref = pd.read_csv("../data/ref/list1/graph{}.csv".format(set_params["nc"]))
+        print("Liste_1")
+    if(list_number == "List2.txt"):
+        ref = pd.read_csv("../data/ref/list1/graph{}.csv".format(set_params["nc"]))
+        print("Liste_2")
+    if(list_number !=  "List1.txt" and list_number != "List2.txt" ):
+        print("error, Numéro de liste non supporté")
+
+
+    if(plot_type != "plt" and plot_type != "plotly"):
+        print("Erreur : plot_type = \"plt\" ou plot_type = \"plotly\"")
+
+
+
+
+
 
 
     cfg = yaml.safe_load(open('../data/config/example.in.yaml', 'r'))
