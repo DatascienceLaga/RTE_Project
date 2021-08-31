@@ -99,7 +99,10 @@ def plotly_ts(dfy,ref,h,tension,u,clo,eps):
 
 
     fig.show()
-    #fig.write_html("../data/ts.html")
+    name = "h_{0}_tension_{1}_u_{2}_clo_{3}_eps_{4}".format(h,tension,u,clo,eps)
+    name = name.replace(".","_")
+    print("Plot sauvegardé dans outputs/visualisation/modelisation_basique")
+    fig.write_html("../outputs/visualisation/modelisation_basique/ts_{}.html".format(name))
 
 
 
@@ -119,4 +122,7 @@ def plotly_model(y_pred,y_test,h,tension,u,clo,eps):
 
 
     fig.show()
-    #fig.write_html("../data/model.html")
+    name = "h_{0}_tension_{1}_u_{2}_clo_{3}_eps_{4}".format(h,tension,u,clo,eps)
+    name = name.replace(".","_")
+    print("Plot sauvegardé dans outputs/visualisation/modelisation_basique")
+    fig.write_html("../outputs/visualisation/modelisation_basique/model_{}.html".format(name))

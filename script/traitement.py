@@ -14,8 +14,8 @@ def preprocessing(dfy,ref):
 
     Paramètres
     ----------
-    dfy : 
-    ref !
+    dfy : numpy.ndarray
+    ref : pandas.core.series.Series  
 
     Returns
 
